@@ -2,7 +2,6 @@ import React, { ComponentProps, useId } from 'react'
 type InputProps = ComponentProps<"input">
 
 const Input: React.FC<InputProps> = (props: InputProps) => {
-  const { ...attrs } = props;
   const calculatedWidth = props.width ?? 20;
   const id = useId();
   return (
