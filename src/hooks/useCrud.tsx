@@ -11,4 +11,4 @@ const useCrud = () => {
   }, []);
 }
 
-export default useCrud
+export default useCrud;
