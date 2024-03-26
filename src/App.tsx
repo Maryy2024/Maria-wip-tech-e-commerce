@@ -1,19 +1,15 @@
 import './App.css';
-import Login from './pages/Login/Login';
+import Store from './pages/Store/Store';
 import useCrud from './hooks/useCrud';
-
-
+import Router from './router/Router';
 
 function App() {
 
 
   return (
     <>
-      <h1>
-        Admin Interface
-      </h1>
 
-      <Login />
+      <Router />
     </>
   );
 }
