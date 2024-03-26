@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import Product from '../types/Product';
 
 const useCrud = () => {
+  const [products, setProducts] = useState<Product | null>(null)
+
   useEffect(() => {
     const fetchData = async () => {
         const response = await fetch("http://localhost:3000/products");
@@ -9,6 +12,8 @@ const useCrud = () => {
     }
     fetchData();
   }, []);
+
+  return {products, setProducts}
 }
 
 export default useCrud;

@@ -6,7 +6,7 @@ interface ErrorProps {
 }
 const Error: React.FC<ErrorProps> = ({message, loggedIn}) => {
   return (
-    <div className="error-message" style={{display: (loggedIn) ? 'none' : 'block'}}>{message}</div>
+    <div className="error-message" style={{display: (loggedIn === false) ? 'black' : 'none'}}>{message}</div>
   )
 }
 
