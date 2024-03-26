@@ -22,17 +22,12 @@ const Login = () => {
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
     const user = users.find((user: User) => user.email === email && user.password === password);
-    if (user) {
-      alert('Login successful');
-      setIsLoggedIn(false);
-    } else {
-      alert('Invalid email or password');
-      setIsLoggedIn(true);
-    }
+    setIsLoggedIn(!!user);
+    alert(!!user ? "Login Successful!" : "Invalid Login Credentials.");
   }
   return (
     <div>
-      <Form title="Login" onSubmit={handleSubmit}>
+      <Form title="Login" onSubmit={handleSubmit} >
         <Input name="email" type="email" placeholder="Email" />
         <Input name="password" type="password" placeholder="Password" />
         <Button type="submit">Login</Button>
