@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Card.css";
 import Product from "../../types/Product";
 import CartItems from "../../types/CartItems";
@@ -11,14 +11,10 @@ interface CardProps {
 const Card = ({ item, setProducts, setCartItems }: CardProps) => {
     const [quantity, setQuantity] = useState<number>(0);
 
-    // useEffect(() => {
-
-    // })
-
     const changeQuantity = (quantity: number): void => {
         setQuantity(prev => Math.max(0, prev + quantity));
         if (quantity === 1)
-        setCartItems((prev: CartItems[]) => [...prev, { id: item.id, price: item.price }])
+            setCartItems((prev: CartItems[]) => [...prev, { id: item.id, price: item.price }])
         else setCartItems((prev: CartItems[]) => prev.filter(prev => prev.id !== item.id));
     }
 

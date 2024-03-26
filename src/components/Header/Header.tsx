@@ -8,8 +8,8 @@ interface HeaderProps {
   products: Product[];
   cartItems: CartItems[];
 }
-const Header: React.FC<HeaderProps> = ({products, cartItems}) => {
-    
+const Header: React.FC<HeaderProps> = ({ products, cartItems }) => {
+
   return (
     <div>
       <Searchbar />

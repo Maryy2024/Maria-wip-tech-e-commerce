@@ -6,8 +6,6 @@ interface FormProps {
 }
 
 const Form: React.FC<FormProps> = ({ title, children, onSubmit }) => {
-    
-  
     const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);

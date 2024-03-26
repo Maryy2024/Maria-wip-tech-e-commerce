@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import useCrud from '../../hooks/useCrud';
 import Product from '../../types/Product';
 import Card from '../../components/Card/Card';
