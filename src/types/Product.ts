@@ -9,6 +9,5 @@ interface Product {
         rate: number
         count: number
     }
-    quantity: number;
 }
 export default Product;

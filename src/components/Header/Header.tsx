@@ -1,13 +1,21 @@
 import React from 'react';
+import Searchbar from '../Searchbar/Searchbar';
+import Cart from '../Cart/Cart';
+import Product from '../../types/Product';
+import CartItems from '../../types/CartItems';
 
-const Header = () => {
+interface HeaderProps {
+  products: Product[];
+  cartItems: CartItems[];
+}
+const Header: React.FC<HeaderProps> = ({products, cartItems}) => {
     
   return (
     <div>
-      <h1>e-commerce</h1>
+      <Searchbar />
+      <Cart products={products} cartItems={cartItems} />
     </div>
   );
 }
-//cart
-//searchbar
+
 export default Header;
