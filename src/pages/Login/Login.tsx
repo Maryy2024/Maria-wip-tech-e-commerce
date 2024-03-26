@@ -25,6 +25,7 @@ const Login = () => {
     setIsLoggedIn(!!user);
     alert(!!user ? "Login Successful!" : "Invalid Login Credentials.");
   }
+  
   return (
     <div>
       <Form title="Login" onSubmit={handleSubmit} >
