@@ -3,18 +3,17 @@ import Product from '../../types/Product';
 import Card from './../../components/Card/Card';
 
 type CartProps = {
-    price: number,
-    products: []
+    products: Product[]
 }
 
-const Cart = ({price, products}: CartProps) => {
+const Cart = ({products}: CartProps) => {
 
     const [totQuantity, setTotQuantity] = useState<number>(0)
     const [totPrice, setTotPrice] = useState<number>(0);
 
     useEffect(() => {
-        setTotQuantity(products.reduce((acc: number, products: any) => acc + products.quantity, 0));
-        setTotPrice(products.reduce((acc: number, products: Product)=> acc + products.price * products.quantity, 0));
+        setTotQuantity(products.reduce((acc, products) => acc + products.quantity, 0));
+        setTotPrice(products.reduce((acc, products)=> acc + products.price * products.quantity, 0));
       }, [products])
     
     
@@ -22,7 +21,7 @@ const Cart = ({price, products}: CartProps) => {
   return (
 
          <div className="container_cart_quantity">
-        <div className={totQuantity === 0 ? "hidden" : ""}>{`${price.toFixed(2)}€`}</div>
+        <div className={totQuantity === 0 ? "hidden" : ""}>{`${totPrice.toFixed(2)}€`}</div>
         <div className="cart-container">
             <img className="cart" src="cart.png" alt="Cart"></img>
         </div>
