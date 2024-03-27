@@ -1,19 +1,18 @@
 import React from 'react';
 import Searchbar from '../Searchbar/Searchbar';
 import Cart from '../Cart/Cart';
-import Product from '../../types/Product';
 import CartItems from '../../types/CartItems';
+import "./Header.css"
 
 interface HeaderProps {
-  products: Product[];
   cartItems: CartItems[];
 }
-const Header: React.FC<HeaderProps> = ({ products, cartItems }) => {
+const Header: React.FC<HeaderProps> = ({ cartItems }) => {
 
   return (
-    <div>
+    <div className="d-flex justify-content-between header">
       <Searchbar />
-      <Cart products={products} cartItems={cartItems} />
+      <Cart cartItems={cartItems} />
     </div>
   );
 }
