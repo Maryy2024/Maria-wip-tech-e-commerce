@@ -4,6 +4,7 @@ import Form from '../../components/Form/Form';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import Error from '../../components/Error/Error';
+import "./Login.css"
 
 const Login = () => {
   const [users, setUsers] = useState([]);
@@ -27,7 +28,7 @@ const Login = () => {
   }
   
   return (
-    <div>
+    <div className="login-container">
       <Form title="Login" onSubmit={handleSubmit} >
         <Input name="email" type="email" placeholder="Email" />
         <Input name="password" type="password" placeholder="Password" />
