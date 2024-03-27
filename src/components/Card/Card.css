@@ -1,12 +1,14 @@
-.card {
+.card.product-card {
   padding: 1rem;
   border-radius: 10px;
   margin: 20px;
+  background-image: linear-gradient(to bottom right, #FFFFFF 0%, #DFDFEF 100%);
+  width: 18rem;
 }
-
 .card-img-top {
   height: 200px;
-  object-fit: cover;
+  background-color: white;
+  object-fit: contain;
 }
 
 .card .card-body {
@@ -23,11 +25,12 @@
 }
 
 .card p.truncate {
+  /* This tells how many lines to display */
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  /* Number of lines to show */
   -webkit-box-orient: vertical;
+  /*                                      */
   max-width: 200px;
   max-height: 5rem;
 }
@@ -35,7 +38,7 @@
 .card h5.truncate {
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 230px;
   height: 3rem;
 }
 
